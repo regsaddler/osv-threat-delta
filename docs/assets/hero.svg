@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">OSV Threat Delta</title>
+  <desc id="desc">A radar-like dependency graph showing verified changes emerging from a pinned software inventory.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#08120f"/>
+      <stop offset="0.58" stop-color="#102a22"/>
+      <stop offset="1" stop-color="#13362b"/>
+    </linearGradient>
+    <linearGradient id="signal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6ce5a1"/>
+      <stop offset="1" stop-color="#d9ff7a"/>
+    </linearGradient>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#d9ff7a" stroke-opacity=".055"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="420" rx="28" fill="url(#bg)"/>
+  <rect width="1200" height="420" rx="28" fill="url(#grid)"/>
+  <g transform="translate(760 210)">
+    <circle r="146" fill="none" stroke="#6ce5a1" stroke-opacity=".12"/>
+    <circle r="104" fill="none" stroke="#6ce5a1" stroke-opacity=".18"/>
+    <circle r="62" fill="none" stroke="#6ce5a1" stroke-opacity=".26"/>
+    <path d="M-170 0H170M0-170V170" stroke="#6ce5a1" stroke-opacity=".09"/>
+    <path d="M0 0L127-87" stroke="url(#signal)" stroke-width="3" filter="url(#glow)"/>
+    <circle cx="127" cy="-87" r="8" fill="#d9ff7a" filter="url(#glow)"/>
+    <circle cx="-67" cy="-47" r="6" fill="#6ce5a1"/>
+    <circle cx="72" cy="61" r="6" fill="#6ce5a1"/>
+    <circle cx="-103" cy="82" r="6" fill="#6ce5a1"/>
+    <path d="M-103 82L-67-47L72 61L127-87" fill="none" stroke="#6ce5a1" stroke-opacity=".55" stroke-width="2"/>
+    <rect x="-28" y="-34" width="56" height="68" rx="12" fill="#07130f" stroke="#d9ff7a" stroke-width="2"/>
+    <path d="M-11-2l8 8 16-20" fill="none" stroke="#d9ff7a" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+  </g>
+  <g transform="translate(72 85)">
+    <text x="0" y="0" fill="#d9ff7a" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" letter-spacing="3">EVIDENCE, NOT ALARMISM</text>
+    <text x="0" y="72" fill="#f3f7ee" font-family="Georgia, 'Times New Roman', serif" font-size="64" font-weight="700">OSV Threat Delta</text>
+    <text x="0" y="119" fill="#a9c6b7" font-family="ui-sans-serif, system-ui, sans-serif" font-size="24">Know what changed. Verify what was reported.</text>
+    <g transform="translate(0 170)" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16">
+      <rect width="198" height="42" rx="21" fill="#d9ff7a"/>
+      <text x="22" y="27" fill="#0b1712" font-weight="700">ZERO RUNTIME DEPS</text>
+      <rect x="214" width="188" height="42" rx="21" fill="none" stroke="#6ce5a1"/>
+      <text x="236" y="27" fill="#cce9d9">TAMPER-EVIDENT</text>
+    </g>
+  </g>
+</svg>

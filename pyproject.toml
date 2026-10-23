@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "osv-threat-delta"
+version = "0.1.0"
+description = "A fail-closed, evidence-preserving OSV delta scanner for hash-pinned Python lockfiles."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Reg Saddler" }]
+keywords = ["osv", "security", "dependencies", "supply-chain", "python"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Operating System :: MacOS",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Security",
+  "Topic :: Software Development :: Quality Assurance",
+]
+dependencies = []
+
+[project.scripts]
+osv-threat-delta = "osv_threat_delta.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/regsaddler/osv-threat-delta"
+Issues = "https://github.com/regsaddler/osv-threat-delta/issues"
+Source = "https://github.com/regsaddler/osv-threat-delta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
